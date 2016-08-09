@@ -131,7 +131,7 @@
     
 
             <div class="col-xs-12 col-sm-9" style="padding-top: 40px">
-                <h1 id="mp-content">New Windows Event Range Collection Rule</h1>
+                <h1 id="mp-content">New Windows Script Performance Collection Rule</h1>
                 <p><blockquote>
 <p><strong>Before you begin:</strong> Before creating a new rule you need to decide on a rule ID and a display name. </p>
 <p>For more information, consult the <em>Management Pack Content</em> document, section <em>Workflow/Element naming</em>.  </p>
@@ -144,51 +144,47 @@ If the project is not open in Visual Studio, open it.</p>
 Right-click the References folder in the project and select <code>Add reference</code>. Browse to the management pack and select it. Verify that the aliases are the correct by checking properties on each reference: </p>
 <p><table><tr><th>MP</th><th>Alias</th></tr>
 <tr><td>Microsoft.SystemCenter.DataWarehouse.Library</td><td>MSDL</td></tr>
-</table>  </p>
+</table> </p>
 </blockquote>
 <p><br />
 <img alt="Add new item" src="/images/snippetguides.addnewitem.png" title="Add new item" /><br />
 Find the folder for the class that you want to create a rule for. Right-click the folder and choose <code>Add\New Item...</code>.  In the list, select <code>Empty Management Pack Fragment</code>.</p>
 <p><br />
-<img alt="Enter fragment name" src="/images/snippetguides.collectionrule.winevent.fragment.png" title="Enter fragment name" /><br />
-Enter a name for the fragment. This should be the same as as the description part of the rule name plus the word <code>CollectionRule</code>. So if the rule description is <code>SyncFailureEvent</code> the new fragment should be named <code>SyncFailureEventCollectionRule</code>. Click Add. The fragment is created and opened.</p>
+<img alt="Enter fragment name" src="/images/snippetguides.collectionrule.scriptperformance.fragment.png" title="Enter fragment name" /><br />
+Enter a name for the fragment. This should be the same as as the description part of the rule name plus the word <code>CollectionRule</code>. So if the rule description is <code>UserConnections</code> the new fragment should be named <code>UserConnectionsCollectionRule</code>. Click Add. The fragment is created and opened.</p>
 <p><br />
 <img alt="Pick snippet" src="/images/snippetguides.collectionrule.snippets.png" title="Pick snippet" /><br />
-Right-click between the <code>&lt;ManagementPackFragment&gt;</code> tags and select <code>Insert snippet</code>. Choose <code>MPAuthoring\Rules\Collection Rules\</code> and select the <code>Windows Eventlog, Range of Event IDs</code> snippet.<br />
+Right-click between the <code>&lt;ManagementPackFragment&gt;</code> tags and select <code>Insert snippet</code>. Choose <code>MPAuthoring\Rules\Collection Rules\</code> and select the <code>Script Performance</code> snippet.<br />
 The code is inserted. </p>
-<p><br /><br />
-<img alt="Enter MPID" src="/images/snippetguides.collectionrule.mpid.png" title="Enter MPID" /><br />
+<p><img alt="Enter MPID" src="/images/snippetguides.collectionrule.scriptperformance.mpid.png" title="Enter MPID" /><br />
 Enter the MPID and press <code>tab</code>.<br />
 Enter the the description part of the rule name. Press <code>tab</code>.  </p>
 <p><br />
-<img alt="Enter target" src="/images/snippetguides.collectionrule.target.png" title="Enter target" /><br />
+<img alt="Enter script name" src="/images/snippetguides.collectionrule.scriptperformance.scriptname.png" title="Enter script name" /><br />
+Enter the name of the script. Press <code>tab</code>.</p>
+<blockquote>
+<p>Note: The script should be placed in the projects script folder.  </p>
+</blockquote>
+<p><br />
+<img alt="Enter timeout" src="/images/snippetguides.collectionrule.scriptperformance.timeout.png" title="Enter timeout." /><br />
+Enter the timeout in seconds. Press <code>tab</code>.  </p>
+<p><br />
+<img alt="Enter target" src="/images/snippetguides.target.png" title="Enter target" /><br />
 Enter the target class. To use intellisense, press <code>Backspace</code> and then <code>Ctrl+Space</code>.
 Press <code>tab</code>. </p>
 <p><br />
-<img alt="Enter path" src="/images/snippetguides.alertrule.networkname.png" title="Enter path" /><br />
-Enter the path to the network name property. This depends on if and how the class is hosted.
-Press <code>tab</code>.</p>
+<img alt="Enter configuration " src="/images/snippetguides.collectionrule.scriptperformance.configuration.png" title="Enter configuration" /><br />
+Enter the Object name and press <code>tab</code>. The Counter name and press <code>tab</code>. Enter the instance name and press <code>tab</code>. Enter the interval which the script should be run, in seconds. Press <code>tab</code>.</p>
 <p><br />
-<img alt="Enter  log name" src="/images/snippetguides.collectionrule.logname.png" title="Enter log name" /><br />
-Enter the name of the event log which contains the event.  <br />
+<img alt="Enter the rule display name" src="/images/snippetguides.collectionrule.scriptperformance.displayname.png" title="Enter the rule display name" /> <br />
+Enter the rule display name and a description. <br />
 Press <code>tab</code>.</p>
-<p><br />
-<img alt="Enter source name" src="/images/snippetguides.collectionrule.source.png" title="Enter source name" /><br />
-Enter the name of the events source. This is shown as "source" in the event viewer but can also be called "publisher name" or "provider name".      <br />
-Press <code>tab</code>. </p>
-<p><br />
-<img alt="Enter event id" src="/images/snippetguides.collectionrule.eventidrange.png" title="Enter event id" /><br />
-Enter the lower and upper event id for the range you want to collect.      <br />
-Press <code>tab</code>.</p>
-<p><br />
-<img alt="Enter the rule display name" src="/images/snippetguides.collectionrule.displayname.png" title="Enter the rule display name" /> <br />
-Enter the rule display name. <br />
-Press <code>tab</code>.</p>
-<p>Press <code>enter</code> to stop editing.</p></p>
+<p>Press <code>enter</code> to stop editing. The rule is now done.</p>
+<p>Save the file/project.</p></p>
                 
                 <footer>
                     Version: 1.0<br />
-                    Created: 2016-08-09, 13:41<br />
+                    Created: 2016-08-09, 15:24<br />
                 </footer>
                 
             </div>
