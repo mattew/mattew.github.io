@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MP Development Toolkit</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/theme/font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="/theme/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/theme/css/creative.css" type="text/css">
+    
+     <!--Google Analytics-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-61710861-2', 'auto');
+            ga('send', 'pageview');
+    </script>
+
+</head>
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand page-scroll" href="/index.html#page-top">MP Development Toolkit</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="/blog">News</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/about.html">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/index.html#toolkit">The toolkit</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Documentation <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/mp-content.html">MP Content</a></li>
+                        <li><a href="/snippet-guides.html">Snippet Guides</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+    <header style="background-image: url(/theme/images/mpcontent.jpg);min-height: 50%;">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>MP Content</h1>
+            </div>
+        </div>
+    </header>
+ <section id="documentation">
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <!-- sidebar -->
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                <i class="fa fa-4x fa-sitemap wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                <br /><br />
+
+                <ul class="nav">
+                    <li><span class="navbarheader">MP Content</span></li>
+                    <li class="active"><a href="mp-content.html">Home</a></li>
+                    <li><span class="navbarheader">Management Pack</span></li>
+                            <li><a href="management-pack-naming.html">Management pack naming</a></li>
+                            <li><a href="management-pack-types.html">Management pack types</a></li>
+                    <li><span class="navbarheader">Workflows/Elements</span></li>
+                            <li><a href="aggregate-rollup-monitor.html">Aggregate Rollup Monitor</a></li>
+                            <li><a href="class.html">Class</a></li>
+                            <li><a href="dependency-monitor.html">Dependency Monitor</a></li>
+                            <li><a href="discovery.html">Discovery</a></li>
+                            <li><a href="group.html">Group</a></li>
+                            <li><a href="rule.html">Rule</a></li>
+                            <li><a href="unit-monitor.html">Unit Monitor</a></li>
+ 
+                       <li><span class="navbarheader">Presentation</span></li>
+                            <li><a href="folder.html">Folder</a></li>
+                            <li><a href="view.html">View</a></li>
+                   
+                    <li><span class="navbarheader">Other</span></li>
+                </ul>
+                <br />
+                <br />
+            </div>
+    
+
+            <div class="col-xs-12 col-sm-9" style="padding-top: 40px">
+                <h1 id="mp-content">Class</h1>
+                <p><h2>Class naming</h2>
+<p>A class element can be created in either an application, service or extension management pack, based on the requirements for that management pack. The ID and name is not affected by the type of management pack.</p>
+<h3>Class ID</h3>
+<p>The ID of the class is made up of three different parts, described below.  </p>
+<p><img alt="Class ID" src="/images/mpcontent.workflows.class.png" title="" />  </p>
+<p>The different parts are separated with dots. </p>
+<table>
+    <tr>
+        <th style="width:35%";>Part</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>MPID</td>
+        <td>This is the management pack ID. This must be included to make the class ID unique in the management group. To learn more about MPID, see <a href="management-pack-naming.html">Management pack naming</a>.
+        </td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>This is a description of the class. It's hard to give any definitive guidelines on how descriptive it should be but it should be easy to understand what the class is representing. <strong>If possible, it should contain the base class</strong>.<br />
+            Since the class ID cant contain any spaces they must be removed.<br />
+            <br />
+            The most common base classes are the following:<br />
+            <table>
+                <tr><th style="width:55%">Base Class</th><th>Add to desciption</th></tr>
+                <tr><td>Computer Role</td><td>ComputerRole</td></tr>
+                <tr><td>Local Application</td><td>LocalApplication</td></tr>
+                <tr><td>Application Component</td><td>ApplicationComponent</td></tr>
+                <tr><td>Network Node</td><td>NetworkNode</td></tr>
+                <tr><td>Computer Grouo</td><td>Group</td></tr>
+                <tr><td>Instance Grouo</td><td>Group</td></tr>
+            </table>
+            <br />
+            This is used alot when auhtoring with the MP Authoring Snippets. When a reference is made to the <em>description part</em> of the class id this is what it means.
+            <br /><br />
+        </td>
+    </tr>
+    <tr>
+        <td>Type</td>
+        <td>The type of element/workflow. This should be <i>Class</i>.
+        </td>
+    </tr>
+</table>
+
+<p><br /><br />
+Below are some examples of class IDs.  </p>
+<table>
+    <tr>
+        <th style="width:40%";>Application info</th>
+        <th>MPID</th>
+    </tr>
+    <tr>
+        <td style="text-align:top">
+            <strong>MPID:</strong> MyCompany.TestMP.3.0  <br />
+            <strong>Class description:</strong> Application Server<br />
+            <strong>Base class:</strong> Computer Role<br />
+        </td>
+        <td>MyCompany.TestMP.3.0.ApplicationServerComputerRole.Class</td>
+    </tr>
+    <tr>
+        <td style="text-align:top">
+            <strong>MPID:</strong> MyCompany.TestMP.3.0  <br />
+            <strong>Class description:</strong> Integration Service<br />
+            <strong>Base class:</strong> Local Application<br />
+        </td>
+        <td>MyCompany.TestMP.3.0.IntgrationServiceLocalApplication.Class</td>
+    </tr>
+    <tr>
+        <td style="text-align:top">
+            <strong>MPID:</strong> MyCompany.TestMP.3.0  <br />
+            <strong>Class description:</strong> Temperature Sensor<br />
+            <strong>Base class:</strong> Network Node<br />
+        </td>
+        <td>MyCompany.TestMP.3.0.TemperatureSensorNetworkNode.Class</td>
+    </tr>
+    <tr>
+        <td style="text-align:top">
+            <strong>MPID:</strong> MyCompany.TestMP.3.0  <br />
+            <strong>Class description:</strong> Adonis Applicance<br />
+            <strong>Base class:</strong> Network Node<br />
+        </td>
+        <td>MyCompany.TestMP.3.0.AdonisApplicanceNetworkNode.Class</td>
+    </tr>
+</table>
+
+<p><br /></p>
+<h3>Display name</h3>
+<p>The display name should be chosen to that it's easy to understand what class it is. It's not as tightly controlled as the Class ID but should still follow the same basic principal. It's important that you understand what the class is representing without making the name to complicated. Include the base class if it makes the name clearer, but it's not mandatory.</p>
+<p>Based on the example above the display name could be:</p>
+<div class="highlight"><pre><span></span>TestMP Application Server Computer Role  
+MyCompany TestMP Integration Service Local Application
+Temperature Sensor Network Node
+Adonis Applicance
+</pre></div>
+
+
+<p><br /></p></p>
+                
+                <footer>
+                    Version: 1.0<br />
+                    Created: 2016-05-22, 18:00<br />
+                </footer>
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- jQuery -->
+<script src="/theme/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/theme/js/jquery.easing.min.js"></script>
+<script src="/theme/js/jquery.fittext.js"></script>
+<script src="/theme/js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/theme/js/creative.js"></script>
+</body>
+
+</html>
