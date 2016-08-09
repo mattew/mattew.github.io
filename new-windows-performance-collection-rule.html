@@ -136,7 +136,26 @@
 <p><a href="/rule.html">Rule naming</a></p>
 </blockquote>
 <p><br />
-If the project is not open in Visual Studio, open it.</p></p>
+If the project is not open in Visual Studio, open it.</p>
+<blockquote>
+<p><strong>Note:</strong> If there's no prior reference to the following management packs it must be added:<br />
+Right-click the References folder in the project and select <code>Add reference</code>. Browse to the management pack and select it. Verify that the aliases are the correct by checking properties on each reference: </p>
+<p><table><tr><th>MP</th><th>Alias</th></tr>
+<tr><td>System.Performance.Library</td><td>Perf</td></tr>
+<tr><td>Microsoft.SystemCenter.DataWarehouse.Library</td><td>MSDL</td></tr>
+</table>  </p>
+</blockquote>
+<p><br />
+<img alt="Add new item" src="/images/snippetguides.addnewitem.png" title="Add new item" /><br />
+Find the folder for the class that you want to create a rule for. Right-click the folder and choose <code>Add\New Item...</code>.  In the list, select <code>Empty Management Pack Fragment</code>.</p>
+<p><br />
+<img alt="Enter fragment name" src="/images/snippetguides.collectionrule.winperformance.fragment.png" title="Enter fragment name" /><br />
+Enter a name for the fragment. This should be the same as as the description part of the rule name plus the word <code>CollectionRule</code>. So if the rule description is <code>TotalCPU</code> the new fragment should be named <code>TotalCPUCollectionRule</code>. Click Add. The fragment is created and opened.</p>
+<p><br />
+<img alt="Pick snippet" src="/images/snippetguides.collectionrule.snippets.png" title="Pick snippet" /><br />
+Right-click between the <code>&lt;ManagementPackFragment&gt;</code> tags and select <code>Insert
+snippet</code>. Choose <code>MPAuthoring\Rules\Collection Rules\</code> and select the Windows Performance snippet.<br />
+The code is inserted. </p></p>
                 
                 <footer>
                     Version: 1.0<br />
