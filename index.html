@@ -1,41 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <title>neonhundar</title>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Mattias Wikstrom" />
+    <title>neonhundar</title>
+    <meta name="color-scheme" content="light dark" />
+    <style>
+      :root {
+        --bg: #fff;
+        --fg: #000;
+        --logo-dark: #555;
+        --logo-light: #aaa;
+        --muted: #767676;
+      }
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-</nav>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111;
+          --fg: #fff;
+          --logo-dark: #aaa;
+          --logo-light: #555;
+          --muted: #8c8c8c;
+        }
+      }
 
-<pre style="font-family:'Courier New',Courier,monospace;font-size:12px;line-height:1.17;white-space:pre;background-color:#000;color:#fff;padding:8px;margin:0;"><span style="color:#FFFFFF">█▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀▀▀▀▀▀▄ </span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF"> ▄▀▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀█</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF"> ▄▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀▀▄ </span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF">█▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀▀▀▀▀▀▄ </span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF">█▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀█ ▓▀▀▀█</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF">█▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀█ ▓▀▀▀█</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF">█▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀▀▀▀▀▀▄ </span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF">█▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀▀▄ </span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF"> ▄▀▀▀▀▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀▀█</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF">█▀▀</span><span style="color:#AAAAAA">▀</span><span style="color:#FFFFFF">▀▀▀▀▀▀▄ </span>
-<span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#FFFFFF">    ▄▄    █</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF">█·   ▄▄▄▄▄</span><span style="color:#AAAAAA">▄█ </span><span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#FFFFFF">    ▄▄ .  █</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#FFFFFF">    ▄▄    █</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#FFFFFF">    ▓ ▒ ∙ █</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#FFFFFF">    ▓ ▒.  █</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#FFFFFF">    ▄▄    █</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#FFFFFF">    ▄▄ .  █</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF">█   .▄▄   ∙</span><span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▀</span><span style="color:#FFFFFF">    ▄▄  ∙ █</span>
-<span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF"> ▌   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">  . </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">▄▄▄▄▄▄</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF"> ▌   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF"> ▌   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">▄░   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF"> ▒   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF"> ▌   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF"> ▌   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    ▐▄▌.  </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">▄▌   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span>
-<span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> · </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> ∙  </span><span style="color:#AAAAAA">▄▄▄▄▄▄</span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">  · </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> · </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">   ·</span><span style="color:#AAAAAA">▄▄▄</span><span style="color:#FFFFFF">   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">  · </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF"> · </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">  · </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA">▄</span><span style="color:#FFFFFF;background-color:#AAAAAA">▓</span><span style="color:#FFFFFF">   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">∙ . </span><span style="color:#AAAAAA">▄▄▄</span><span style="color:#FFFFFF">   </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">▒</span><span style="color:#FFFFFF">   ·</span><span style="color:#AAAAAA">▄▄▄</span><span style="color:#FFFFFF">  </span><span style="color:#AAAAAA">▀▄</span>
-<span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">   ∙</span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">   </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA">▄▄▄▄▄▄ </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA">▄</span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#555555">·</span><span style="color:#FFFFFF">. </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">   ∙</span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">   </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF"> .  </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">  .</span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA">▄</span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#555555">·</span><span style="color:#FFFFFF">. </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">   ∙</span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">   </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">       </span><span style="color:#555555">·</span><span style="color:#FFFFFF">. </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">    </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">  ·</span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#AAAAAA"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF"> .  </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF"> </span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span><span style="color:#FFFFFF">  .</span><span style="color:#FFFFFF;background-color:#AAAAAA">░</span>
-<span style="color:#AAAAAA">█</span><span style="color:#FFFFFF"> ∙  </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF">   </span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF">    .    ·</span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF">   .      </span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF"> ∙  </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF">   </span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF">    </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF">∙  </span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF">   .      </span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF"> ∙  </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF">   </span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF">   .      </span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF"> .  </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF">   </span><span style="color:#AAAAAA">█ █</span><span style="color:#FFFFFF">    </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█</span><span style="color:#FFFFFF">∙  </span><span style="color:#AAAAAA">█</span>
-<span style="color:#AAAAAA">█▄▄▄▄█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ </span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">▀▄▄▄▄▄▄▄▄▀</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA"> █▄▄▄▄█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█▄▄▄█ █▄▄▄▄█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ █▄▄▄▄█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ █▄▄▄▄█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█▄▄▄█ █▄▄▄▄█</span><span style="color:#FFFFFF"> </span><span style="color:#AAAAAA">█▄▄▄█</span></pre>
+      body {
+        margin: 0;
+        padding: 2rem 1rem;
+        background-color: var(--bg);
+        color: var(--fg);
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+      }
 
+      .logo {
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 12px;
+        line-height: 1.17;
+      }
 
+      .logo .dark {
+        color: var(--logo-dark);
+      }
+      .logo .light {
+        color: var(--logo-light);
+      }
+      .logo .shade {
+        background-color: var(--logo-dark);
+      }
 
+      .intro {
+        max-width: 40rem;
+        margin: 1.5rem auto 0;
+        text-align: center;
+        font-size: 0.875rem;
+        font-weight: 300;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+    </style>
+  </head>
 
-<!-- jQuery -->
-<script src="http://mpdev.mattew.se/theme/js/jquery.js"></script>
+  <body>
+    <header>
+      <pre
+        class="logo"
+        role="img"
+        aria-label="neonhundar"
+      >█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ <span class="dark"> </span> ▄▀▀▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀█<span class="dark"> </span> ▄▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀▀▄ <span class="dark"> </span>█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ <span class="dark"> </span>█▀▀<span class="dark">▀</span>▀█ ▓▀▀▀█<span class="dark"> </span>█▀▀<span class="dark">▀</span>▀█ ▓▀▀▀█<span class="dark"> </span>█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ <span class="dark"> </span>█▀▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀▀▄ <span class="dark"> </span> ▄▀▀▀▀▀▀<span class="dark">▀</span>▀▀█<span class="dark"> </span>█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ 
+<span class="shade">▀</span>    ▄▄    █<span class="dark"> </span>█·   ▄▄▄▄▄<span class="dark">▄█ </span><span class="shade">▀</span>    ▄▄ .  █<span class="dark"> </span><span class="shade">▀</span>    ▄▄    █<span class="dark"> </span><span class="shade">▀</span>    ▓ ▒ ∙ █<span class="dark"> </span><span class="shade">▀</span>    ▓ ▒.  █<span class="dark"> </span><span class="shade">▀</span>    ▄▄    █<span class="dark"> </span><span class="shade">▀</span>    ▄▄ .  █<span class="dark"> </span>█   .▄▄   ∙<span class="shade">▀</span><span class="dark"> </span><span class="shade">▀</span>    ▄▄  ∙ █
+<span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>  . <span class="shade">▓</span>▄▄▄▄▄▄<span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span>▄░   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▒   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    ▐▄▌.  <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span>▄▌   <span class="shade">▓</span>
+<span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span> ∙  <span class="dark">▄▄▄▄▄▄</span><span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>  · <span class="shade">▒</span> <span class="shade">▓</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>   ·<span class="dark">▄▄▄</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>  · <span class="shade">▒</span> <span class="shade">▓</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>  · <span class="shade">▒</span><span class="dark">▄</span><span class="shade">▓</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>∙ . <span class="dark">▄▄▄</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>   ·<span class="dark">▄▄▄</span>  <span class="dark">▀▄</span>
+<span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄▄▄▄▄▄ </span><span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄</span><span class="shade">░</span><span class="light">·</span>. <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span> .  <span class="shade">░</span> <span class="shade">░</span>  .<span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄</span><span class="shade">░</span><span class="light">·</span>. <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>       <span class="light">·</span>. <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>    <span class="shade">░</span> <span class="shade">░</span>  ·<span class="shade">░</span><span class="dark"> </span><span class="shade">░</span> .  <span class="shade">░</span> <span class="shade">░</span>  .<span class="shade">░</span>
+<span class="dark">█</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█ █</span>    .    ·<span class="dark">█ █</span>   .      <span class="dark">█ █</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█ █</span>    <span class="dark">█</span> <span class="dark">█</span>∙  <span class="dark">█ █</span>   .      <span class="dark">█ █</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█ █</span>   .      <span class="dark">█ █</span> .  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█ █</span>    <span class="dark">█</span> <span class="dark">█</span>∙  <span class="dark">█</span>
+<span class="dark">█▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ </span> <span class="dark">▀▄▄▄▄▄▄▄▄▀</span> <span class="dark"> █▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ █▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ █▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄█</span> <span class="dark">█▄▄▄█</span></pre>
+    </header>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="http://mpdev.mattew.se/theme/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="http://mpdev.mattew.se/theme/js/jquery.easing.min.js"></script>
-<script src="http://mpdev.mattew.se/theme/js/jquery.fittext.js"></script>
-<script src="http://mpdev.mattew.se/theme/js/wow.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="http://mpdev.mattew.se/theme/js/creative.js"></script>
-</body>
-
+    <main>
+      <p class="intro">
+        Vi är alldeles nya! Så det finns inte så mycket här ännu.<br />
+        Men mer info kommer.<br /><br />
+        Tills dess nås vi på MAIL.
+      </p>
+    </main>
+  </body>
 </html>
