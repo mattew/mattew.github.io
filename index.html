@@ -39,16 +39,31 @@
       }
 
       .logo {
-        width: fit-content;
-        max-width: 100%;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        column-gap: 0.6em; /* one character column between NEON and HUNDAR */
         padding: 8px;
-        overflow-x: auto;
         font-family: "Courier New", Courier, monospace;
         /* 129 columns × 0.6em per character ≈ 77.4em wide; shrink to fit
            the viewport minus body and logo padding, capped at 12px. */
         font-size: min(12px, (100vw - 3rem) / 80);
         line-height: 1.17;
+      }
+
+      .logo pre {
+        margin: 0;
+        font: inherit;
+      }
+
+      /* On narrow screens, stack NEON above HUNDAR so the logo can be
+         larger. HUNDAR is the wider part at 77 columns ≈ 46.2em. */
+      @media (max-width: 40rem) {
+        .logo {
+          flex-direction: column;
+          align-items: center;
+          row-gap: 1.17em;
+          font-size: min(12px, (100vw - 3rem) / 48);
+        }
       }
 
       .logo .dark {
@@ -75,17 +90,22 @@
 
   <body>
     <header>
-      <pre
-        class="logo"
-        role="img"
-        aria-label="neonhundar"
-      >█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ <span class="dark"> </span> ▄▀▀▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀█<span class="dark"> </span> ▄▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀▀▄ <span class="dark"> </span>█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ <span class="dark"> </span>█▀▀<span class="dark">▀</span>▀█ ▓▀▀▀█<span class="dark"> </span>█▀▀<span class="dark">▀</span>▀█ ▓▀▀▀█<span class="dark"> </span>█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ <span class="dark"> </span>█▀▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀▀▄ <span class="dark"> </span> ▄▀▀▀▀▀▀<span class="dark">▀</span>▀▀█<span class="dark"> </span>█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ 
-<span class="shade">▀</span>    ▄▄    █<span class="dark"> </span>█·   ▄▄▄▄▄<span class="dark">▄█ </span><span class="shade">▀</span>    ▄▄ .  █<span class="dark"> </span><span class="shade">▀</span>    ▄▄    █<span class="dark"> </span><span class="shade">▀</span>    ▓ ▒ ∙ █<span class="dark"> </span><span class="shade">▀</span>    ▓ ▒.  █<span class="dark"> </span><span class="shade">▀</span>    ▄▄    █<span class="dark"> </span><span class="shade">▀</span>    ▄▄ .  █<span class="dark"> </span>█   .▄▄   ∙<span class="shade">▀</span><span class="dark"> </span><span class="shade">▀</span>    ▄▄  ∙ █
-<span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>  . <span class="shade">▓</span>▄▄▄▄▄▄<span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span>▄░   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▒   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    ▐▄▌.  <span class="shade">▓</span><span class="dark"> </span><span class="shade">▓</span>    <span class="shade">▓</span>▄▌   <span class="shade">▓</span>
-<span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span> ∙  <span class="dark">▄▄▄▄▄▄</span><span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>  · <span class="shade">▒</span> <span class="shade">▓</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>   ·<span class="dark">▄▄▄</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>  · <span class="shade">▒</span> <span class="shade">▓</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>  · <span class="shade">▒</span><span class="dark">▄</span><span class="shade">▓</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>∙ . <span class="dark">▄▄▄</span>   <span class="shade">▒</span><span class="dark"> </span><span class="shade">▒</span>   ·<span class="dark">▄▄▄</span>  <span class="dark">▀▄</span>
-<span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄▄▄▄▄▄ </span><span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄</span><span class="shade">░</span><span class="light">·</span>. <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span> .  <span class="shade">░</span> <span class="shade">░</span>  .<span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄</span><span class="shade">░</span><span class="light">·</span>. <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>       <span class="light">·</span>. <span class="shade">░</span><span class="dark"> </span><span class="shade">░</span>    <span class="shade">░</span> <span class="shade">░</span>  ·<span class="shade">░</span><span class="dark"> </span><span class="shade">░</span> .  <span class="shade">░</span> <span class="shade">░</span>  .<span class="shade">░</span>
-<span class="dark">█</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█ █</span>    .    ·<span class="dark">█ █</span>   .      <span class="dark">█ █</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█ █</span>    <span class="dark">█</span> <span class="dark">█</span>∙  <span class="dark">█ █</span>   .      <span class="dark">█ █</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█ █</span>   .      <span class="dark">█ █</span> .  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█ █</span>    <span class="dark">█</span> <span class="dark">█</span>∙  <span class="dark">█</span>
-<span class="dark">█▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ </span> <span class="dark">▀▄▄▄▄▄▄▄▄▀</span> <span class="dark"> █▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ █▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄▄▄▄▄▄▄█ █▄▄▄▄█</span> <span class="dark">█▄▄▄█ █▄▄▄▄█</span> <span class="dark">█▄▄▄█</span></pre>
+      <div class="logo" role="img" aria-label="neonhundar">
+        <pre>█▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄   ▄▀▀▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀█  ▄▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀▀▄  █▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ 
+<span class="shade">▀</span>    ▄▄    █ █·   ▄▄▄▄▄<span class="dark">▄█</span> <span class="shade">▀</span>    ▄▄ .  █ <span class="shade">▀</span>    ▄▄    █
+<span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span> <span class="shade">▓</span>  . <span class="shade">▓</span>▄▄▄▄▄▄ <span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span> <span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span>
+<span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span> <span class="shade">▒</span> ∙  <span class="dark">▄▄▄▄▄▄</span><span class="shade">▒</span> <span class="shade">▒</span>  · <span class="shade">▒</span> <span class="shade">▓</span>   <span class="shade">▒</span> <span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span>
+<span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span> <span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄▄▄▄▄▄</span> <span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄</span><span class="shade">░</span><span class="light">·</span>. <span class="shade">░</span> <span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span>
+<span class="dark">█</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█</span> <span class="dark">█</span>    .    ·<span class="dark">█</span> <span class="dark">█</span>   .      <span class="dark">█</span> <span class="dark">█</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█</span>
+<span class="dark">█▄▄▄▄█</span> <span class="dark">█▄▄▄█</span> <span class="dark">█▄▄▄▄▄▄▄▄▄▄█</span>  <span class="dark">▀▄▄▄▄▄▄▄▄▀</span>  <span class="dark">█▄▄▄▄█</span> <span class="dark">█▄▄▄█</span></pre>
+        <pre>█▀▀<span class="dark">▀</span>▀█ ▓▀▀▀█ █▀▀<span class="dark">▀</span>▀█ ▓▀▀▀█ █▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄  █▀▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀<span class="dark">▀</span>▀▀▄   ▄▀▀▀▀▀▀<span class="dark">▀</span>▀▀█ █▀▀<span class="dark">▀</span>▀▀▀▀▀▀▄ 
+<span class="shade">▀</span>    ▓ ▒ ∙ █ <span class="shade">▀</span>    ▓ ▒.  █ <span class="shade">▀</span>    ▄▄    █ <span class="shade">▀</span>    ▄▄ .  █ █   .▄▄   ∙<span class="shade">▀</span> <span class="shade">▀</span>    ▄▄  ∙ █
+<span class="shade">▓</span>    <span class="shade">▓</span>▄░   <span class="shade">▓</span> <span class="shade">▓</span>    <span class="shade">▓</span> ▒   <span class="shade">▓</span> <span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span> <span class="shade">▓</span>    <span class="shade">▓</span> ▌   <span class="shade">▓</span> <span class="shade">▓</span>    ▐▄▌.  <span class="shade">▓</span> <span class="shade">▓</span>    <span class="shade">▓</span>▄▌   <span class="shade">▓</span>
+<span class="shade">▒</span>   ·<span class="dark">▄▄▄</span>   <span class="shade">▒</span> <span class="shade">▒</span>  · <span class="shade">▒</span> <span class="shade">▓</span>   <span class="shade">▒</span> <span class="shade">▒</span>    <span class="shade">▒</span> <span class="shade">▒</span> · <span class="shade">▒</span> <span class="shade">▒</span>  · <span class="shade">▒</span><span class="dark">▄</span><span class="shade">▓</span>   <span class="shade">▒</span> <span class="shade">▒</span>∙ . <span class="dark">▄▄▄</span>   <span class="shade">▒</span> <span class="shade">▒</span>   ·<span class="dark">▄▄▄</span>  <span class="dark">▀▄</span>
+<span class="shade">░</span> .  <span class="shade">░</span> <span class="shade">░</span>  .<span class="shade">░</span> <span class="shade">░</span>    <span class="shade">░</span><span class="dark">▄</span><span class="shade">░</span><span class="light">·</span>. <span class="shade">░</span> <span class="shade">░</span>   ∙<span class="shade">░</span> <span class="shade">░</span>   <span class="shade">░</span> <span class="shade">░</span>       <span class="light">·</span>. <span class="shade">░</span> <span class="shade">░</span>    <span class="shade">░</span> <span class="shade">░</span>  ·<span class="shade">░</span> <span class="shade">░</span> .  <span class="shade">░</span> <span class="shade">░</span>  .<span class="shade">░</span>
+<span class="dark">█</span>    <span class="dark">█</span> <span class="dark">█</span>∙  <span class="dark">█</span> <span class="dark">█</span>   .      <span class="dark">█</span> <span class="dark">█</span> ∙  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█</span> <span class="dark">█</span>   .      <span class="dark">█</span> <span class="dark">█</span> .  <span class="dark">█</span> <span class="dark">█</span>   <span class="dark">█</span> <span class="dark">█</span>    <span class="dark">█</span> <span class="dark">█</span>∙  <span class="dark">█</span>
+<span class="dark">█▄▄▄▄█</span> <span class="dark">█▄▄▄█</span> <span class="dark">█▄▄▄▄▄▄▄▄▄▄█</span> <span class="dark">█▄▄▄▄█</span> <span class="dark">█▄▄▄█</span> <span class="dark">█▄▄▄▄▄▄▄▄▄▄█</span> <span class="dark">█▄▄▄▄█</span> <span class="dark">█▄▄▄█</span> <span class="dark">█▄▄▄▄█</span> <span class="dark">█▄▄▄█</span></pre>
+      </div>
     </header>
 
     <main>
