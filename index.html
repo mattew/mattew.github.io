@@ -45,7 +45,9 @@
         padding: 8px;
         overflow-x: auto;
         font-family: "Courier New", Courier, monospace;
-        font-size: 12px;
+        /* 129 columns × 0.6em per character ≈ 77.4em wide; shrink to fit
+           the viewport minus body and logo padding, capped at 12px. */
+        font-size: min(12px, (100vw - 3rem) / 80);
         line-height: 1.17;
       }
 
