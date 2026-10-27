@@ -38,6 +38,10 @@
         padding: 2rem 1rem;
         background-color: var(--bg);
         color: var(--fg);
+        /* Stop iOS Safari from enlarging text in landscape, which breaks
+           the logo's fit-to-width sizing. */
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
         font-family:
           system-ui,
           -apple-system,
