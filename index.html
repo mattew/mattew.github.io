@@ -6,6 +6,14 @@
     <meta name="author" content="Mattias Wikstrom" />
     <title>neonhundar</title>
     <meta name="color-scheme" content="light dark" />
+    <!-- Android has no Courier New and its monospace fonts lack the block
+         characters, so load a font that has them, subset to the logo. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=block&text=%20.%C2%B7%E2%88%99%E2%96%80%E2%96%84%E2%96%88%E2%96%8C%E2%96%90%E2%96%91%E2%96%92%E2%96%93"
+    />
     <style>
       :root {
         --bg: #fff;
@@ -43,7 +51,7 @@
         justify-content: center;
         column-gap: 0.6em; /* one character column between NEON and HUNDAR */
         padding: 8px;
-        font-family: "Courier New", Courier, monospace;
+        font-family: "Noto Sans Mono", monospace;
         /* 129 columns × 0.6em per character ≈ 77.4em wide; shrink to fit
            the viewport minus body and logo padding, capped at 12px. */
         font-size: min(12px, (100vw - 3rem) / 80);
